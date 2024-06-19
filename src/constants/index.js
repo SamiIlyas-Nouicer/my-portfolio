@@ -100,9 +100,9 @@ const technologies = [
   },
   { name: "mySQL", icon: mysql },
   { name: "linux", icon: linux },
-  { name: "python", icon: python },
-  { name: "C", icon: C },
-  { name: "java", icon: java },
+  //{ name: "python", icon: python },
+  //{ name: "C", icon: C },
+  //{ name: "java", icon: java },
   // { name: "next", icon: next },
 ]
 
