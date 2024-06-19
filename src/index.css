@@ -10,4 +10,33 @@ html, body{
 
 .App {
     background-color: #030714;
+    color: #fff;
+    min-height: 100vh;
 }
+
+/* styles.css */
+.gradient-border-blur {
+    position: relative;
+    padding: 2px; /* Adjust this value to control border thickness */
+    border-radius: 1rem; /* Adjust as needed */
+  }
+  
+  .gradient-border-blur::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 2px; /* Adjust to match the border thickness */
+    background: linear-gradient(to top, #4f46e5, #7c3aed, #7c3aed);
+    border-radius: inherit; /* Ensure it matches the border radius */
+    filter: blur(8px); /* Adjust the blur level as needed */
+    z-index: 1;
+  }
+  
+  .inner-container {
+    position: relative;
+    z-index: 2;
+    background-color: #030714; /* Your inner container background (e.g., bg-cinder-950) */
+    border-radius: inherit; /* Match outer border radius */
+    padding: 16px; /* Inner padding */
+  }
+  

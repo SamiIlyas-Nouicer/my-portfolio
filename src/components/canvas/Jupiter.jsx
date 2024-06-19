@@ -10,7 +10,7 @@ const Jupiter = () => {
   return (
     <primitive
       object={jupiter.scene}
-      scale={2.5}
+      scale={1.5}
       position-y={0}
       rotation-y={0}
     />
@@ -20,12 +20,13 @@ const Jupiter = () => {
 const JupiterCanvas = () => {
   return (
     <Canvas
+      data-aos="fade-left"
       shadows
       frameloop="demand"
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
       camera={{
-        fov: 45,
+        fov: 30,
         near: 0.1,
         far: 200,
         position: [-4, 3, 6],

@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unknown-property */
 import { Suspense } from "react"
 import { Canvas } from "@react-three/fiber"
 import {
@@ -8,7 +7,6 @@ import {
   Preload,
   useTexture,
 } from "@react-three/drei"
-
 import CanvasLoader from "../Loader"
 
 const Ball = (props) => {
@@ -16,14 +14,14 @@ const Ball = (props) => {
 
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
-      <ambientLight intensity={0.25} />
-      <directionalLight position={[0, 0, 0.05]} />
+      <ambientLight intensity={1} />
+      <directionalLight position={[1, 1, 0]} intensity={1} />
       <mesh castShadow receiveShadow scale={2.75}>
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
-          color="#fffff"
+          color="white" // Ensure color is set to white
           polygonOffset
-          polygonOffsetFactor={-5}
+          polygonOffsetFactor={0}
           flatShading
         />
         <Decal
