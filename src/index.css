@@ -39,4 +39,41 @@ html, body{
     border-radius: inherit; /* Match outer border radius */
     padding: 16px; /* Inner padding */
   }
+  /* ******************************************************************************************************************************** */
+
+  .list-item {
+    position: relative;
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    width: 150px;
+    text-align: center;
+    background-color: rgba(128, 0, 128, 0.6); /* Purple background with opacity */
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
+  }
+  
+  .list-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: inherit;
+    backdrop-filter: blur(0px); /* Initial no blur */
+    transition: backdrop-filter 0.3s ease-in-out; /* Smooth transition */
+    z-index: -1; /* Behind the text */
+  }
+  
+  .list-item:hover::before {
+    backdrop-filter: blur(20px); /* Apply blur on hover */
+  }
+  
+  .list-item:hover {
+    background-color: rgba(128, 0, 128, 1); /* Fully opaque background on hover */
+  }
   

@@ -12,7 +12,7 @@ export default function Education() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center mb-20">
       <h1
         className="text-4xl font-bold text-center mb-16"
         data-aos="fade-bottom"

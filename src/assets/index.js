@@ -35,7 +35,7 @@ import python from "./tech/python.png"
 import C from "./tech/C.png"
 import java from "./tech/java.png"
 import next from "./tech/next.png"
-
+import movie from "./movie.jpg"
 export {
   logo,
   backend,
@@ -71,4 +71,5 @@ export {
   C,
   java,
   next,
+  movie,
 }

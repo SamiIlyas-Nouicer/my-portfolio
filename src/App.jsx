@@ -8,6 +8,7 @@ import "aos/dist/aos.css"
 import { useEffect } from "react"
 import About from "./components/About"
 import Education from "./components/Education"
+import Projects from "./components/Projects"
 
 function App() {
   useEffect(() => {
@@ -23,6 +24,7 @@ function App() {
       <Hero />
       <About />
       <Education />
+      <Projects />
       <StarsCanvas />
     </div>
   )
