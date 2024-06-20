@@ -1,14 +1,30 @@
-/* eslint-disable react/prop-types */
 import * as React from "react"
 import ToggleButton from "@mui/material/ToggleButton"
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup"
 
-export default function ColorToggleButton({ handleYearChange }) {
+export default function ToggleButtons({ handleYearChange }) {
   const [alignment, setAlignment] = React.useState("Bachelor 1")
 
   const handleChange = (event, newAlignment) => {
-    setAlignment(newAlignment)
-    handleYearChange(newAlignment) // Pass the new alignment value to parent
+    if (newAlignment !== null) {
+      setAlignment(newAlignment)
+      switch (newAlignment) {
+        case "Bachelor 1":
+          handleYearChange(1)
+          break
+        case "Bachelor 2":
+          handleYearChange(2)
+          break
+        case "Bachelor 3":
+          handleYearChange(3)
+          break
+        case "Master 1":
+          handleYearChange(4)
+          break
+        default:
+          break
+      }
+    }
   }
 
   return (
@@ -17,7 +33,7 @@ export default function ColorToggleButton({ handleYearChange }) {
       color="primary"
       value={alignment}
       exclusive
-      onChange={handleChange} // Use onChange for ToggleButtonGroup
+      onChange={handleChange}
       aria-label="Platform"
       sx={{
         display: "flex",
@@ -26,62 +42,22 @@ export default function ColorToggleButton({ handleYearChange }) {
         gap: 3,
       }}
     >
-      <ToggleButton
-        value="Bachelor 1"
-        sx={{
-          color: "white",
-          backgroundColor: "",
-          borderBottom: "1px solid white",
-          "&.Mui-selected": {
-            backgroundColor: "#5926b1",
+      {["Bachelor 1", "Bachelor 2", "Bachelor 3", "Master 1"].map((label) => (
+        <ToggleButton
+          key={label}
+          value={label}
+          sx={{
             color: "white",
-          },
-        }}
-      >
-        Bachelor 1
-      </ToggleButton>
-      <ToggleButton
-        value="Bachelor 2"
-        sx={{
-          color: "white",
-          backgroundColor: "",
-          borderBottom: "1px solid white",
-          "&.Mui-selected": {
-            backgroundColor: "#5926b1",
-            color: "white",
-          },
-        }}
-      >
-        Bachelor 2
-      </ToggleButton>
-      <ToggleButton
-        value="Bachelor 3"
-        sx={{
-          color: "white",
-          backgroundColor: "",
-          borderBottom: "1px solid white",
-          "&.Mui-selected": {
-            backgroundColor: "#5926b1",
-            color: "white",
-          },
-        }}
-      >
-        Bachelor 3
-      </ToggleButton>
-      <ToggleButton
-        value="Master 1"
-        sx={{
-          color: "white",
-          backgroundColor: "",
-          borderBottom: "1px solid white",
-          "&.Mui-selected": {
-            backgroundColor: "#5926b1",
-            color: "white",
-          },
-        }}
-      >
-        Master 1
-      </ToggleButton>
+            borderBottom: "1px solid white",
+            "&.Mui-selected": {
+              backgroundColor: "#5926b1",
+              color: "white",
+            },
+          }}
+        >
+          {label}
+        </ToggleButton>
+      ))}
     </ToggleButtonGroup>
   )
 }

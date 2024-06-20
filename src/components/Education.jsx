@@ -1,31 +1,14 @@
-/* eslint-disable react/jsx-key */
 import { useState } from "react"
 import ToggleButtons from "./ToggleButtons"
-import { Bachelor1, Bachelor2, Bachelor3, Master1 } from "../constants"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCode } from "@fortawesome/free-solid-svg-icons"
-
+import Bachelor1 from "./Bachelor_1"
+import Bachelor2 from "./Bachelor_2"
+import Bachelor3 from "./Bachelor_3"
+import Master1 from "./Master_1"
 export default function Education() {
-  const [year, setYear] = useState("Bachelor 1")
-  const [educations, setEducation] = useState(Bachelor1)
+  const [year, setYear] = useState(1)
+
   const handleYearChange = (newYear) => {
     setYear(newYear)
-    if (newYear === "Bachelor 1") {
-      setEducation(Bachelor1)
-      console.log(Bachelor1)
-    }
-    if (newYear === "Bachelor 2") {
-      setEducation(Bachelor2)
-      console.log(Bachelor2)
-    }
-    if (newYear === "Bachelor 3") {
-      setEducation(Bachelor3)
-      console.log(Bachelor3)
-    }
-    if (newYear === "Master 1") {
-      setEducation(Master1)
-      console.log(Master1)
-    }
   }
 
   return (
@@ -36,19 +19,16 @@ export default function Education() {
       >
         Education
       </h1>
-      <ToggleButtons
-        handleYearChange={handleYearChange}
-        data-aos="fade-bottom"
-      />
-      <ul className="mt-8 w-6/12" data-aos="fade-left">
-        {educations.map((education, index) => (
-          <div className="flex items-center gap-3">
-            <FontAwesomeIcon icon={faCode} className="text-purple-500" />{" "}
-            <li key={index}>{education}</li>
-          </div>
-        ))}
-      </ul>
-      {/* Display selected year */}
+      <ToggleButtons handleYearChange={handleYearChange} />
+      {year === 1 ? (
+        <Bachelor1 />
+      ) : year === 2 ? (
+        <Bachelor2 />
+      ) : year === 3 ? (
+        <Bachelor3 />
+      ) : year === 4 ? (
+        <Master1 />
+      ) : null}
     </div>
   )
 }
