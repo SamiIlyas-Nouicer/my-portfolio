@@ -9,6 +9,7 @@ import { useEffect } from "react"
 import About from "./components/About"
 import Education from "./components/Education"
 import Projects from "./components/Projects"
+import Socials from "./components/Socials"
 
 function App() {
   useEffect(() => {
@@ -25,6 +26,8 @@ function App() {
       <About />
       <Education />
       <Projects />
+
+      <Socials />
       <StarsCanvas />
     </div>
   )
