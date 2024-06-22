@@ -3,12 +3,12 @@
 // Reusable Project Component
 const Project = ({ technologies, image, description }) => {
   return (
-    <div className="flex flex-col justify-between border w-5/12  rounded border-purple-950 bg-no-repeat bg-cover bg-slate-950">
-      <div className="relative overflow-hidden border-none group">
+    <div className="flex flex-col justify-between border  w-5/12 rounded border-purple-950 bg-no-repeat bg-cover bg-slate-950 hover:scale-105 hover:shadow-lg transition transform duration-200 hover:m-3">
+      <div className="relative h-2/3 overflow-hidden border-none group">
         <img
           src={image}
           alt="Project Visual"
-          className="border-none w-full object-cover filter brightness-100 group-hover:brightness-50 transition duration-300 hover:cursor-pointer"
+          className="border-none w-full h-full object-cover filter brightness-100 group-hover:brightness-90 transition duration-300 hover:cursor-pointer"
         />
         <div className="absolute inset-0 bg-opacity-50 bg-purple-950 group-hover:bg-transparent transition duration-200 hover:cursor-pointer"></div>
       </div>
@@ -28,7 +28,7 @@ const Project = ({ technologies, image, description }) => {
         <div className="text-lg font-bold">{description}</div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Project
+export default Project;
