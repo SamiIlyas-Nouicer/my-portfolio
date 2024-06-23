@@ -3,7 +3,10 @@
 // Reusable Project Component
 const Project = ({ technologies, image, description }) => {
   return (
-    <div className="flex flex-col justify-between border  w-5/12 rounded border-purple-950 bg-no-repeat bg-cover bg-slate-950 hover:scale-110 hover:shadow-lg transition transform duration-200 hover:m-8">
+    <div
+      className="flex flex-col justify-between border  w-5/12 rounded border-purple-950 bg-no-repeat bg-cover bg-slate-950
+     hover:scale-110 hover:shadow-lg transition transform duration-200 hover:m-8"
+    >
       <div className="relative h-2/3 overflow-hidden border-none group">
         <img
           src={image}
@@ -28,7 +31,7 @@ const Project = ({ technologies, image, description }) => {
         <div className="text-lg font-bold">{description}</div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Project;
+export default Project

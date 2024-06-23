@@ -1,6 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons"; // Import the icon
-import { faGithub } from "@fortawesome/free-brands-svg-icons"; // Import the icon
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons" // Import the icon
+import { faGithub } from "@fortawesome/free-brands-svg-icons" // Import the icon
 
 export default function Socials() {
   return (
@@ -27,5 +27,5 @@ export default function Socials() {
       </a>
       <div className="h-32 w-0 relative  border"></div>
     </div>
-  );
+  )
 }
