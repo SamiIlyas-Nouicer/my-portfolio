@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { JupiterCanvas } from "./canvas"
 import "animate.css"
 
@@ -23,7 +24,7 @@ export default function Hero() {
             </span>
           </p>
         </div>
-        <div className="w-full lg:w-5/12 min-h-full flex justify-center items-center p-4">
+        <div className="w-full lg:w-5/12  flex justify-center items-center p-4">
           <JupiterCanvas />
         </div>
       </div>
