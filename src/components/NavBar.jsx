@@ -6,7 +6,7 @@ import logo2 from "../assets/logo2.png"
 
 export function NavBar() {
   const handleDownload = () => {
-    const resumeUrl = "/resume.pdf" // Construct the URL to the resume file
+    const resumeUrl = "/Myresume.pdf" // Construct the URL to the resume file
     window.open(resumeUrl, "_blank") // Open the resume in a new tab/window
   }
 
