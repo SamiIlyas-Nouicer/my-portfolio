@@ -27,6 +27,9 @@ export default function Footer() {
         <p className="font-bold text-base sm:text-lg md:text-xl lg:text-2xl">
           Nouicer.samiIlyas@gmail.com
         </p>{" "}
+        <p className="font-bold text-base sm:text-lg md:text-xl lg:text-2xl">
+          +213 555 468 203
+        </p>
         <div className="flex gap-5">
           <a
             href="https://github.com/SamiIlyas-Nouicer"
