@@ -8,7 +8,7 @@ import { useState } from "react"
 export default function Bachelor_1() {
   const [educations, setEducation] = useState(Bachelor1)
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center sm:justify-center sm:items-center">
       <ul className="mt-8 w-6/12" data-aos="fade-left">
         {educations.map((education, index) => (
           <div className="flex  gap-3">

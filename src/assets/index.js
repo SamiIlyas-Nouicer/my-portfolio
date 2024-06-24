@@ -36,6 +36,7 @@ import C from "./tech/C.png"
 import java from "./tech/java.png"
 import next from "./tech/next.png"
 import movie from "./movie.jpg"
+import firebase from "./tech/firebase.png"
 export {
   logo,
   backend,
@@ -72,4 +73,5 @@ export {
   java,
   next,
   movie,
+  firebase,
 }

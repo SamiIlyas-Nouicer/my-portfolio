@@ -1,5 +1,6 @@
 import "./App.css"
 import { NavBar } from "./components/NavBar"
+import { NavBar2 } from "./components/NavBar2"
 import StarsCanvas from "./components/canvas/stars"
 import Hero from "./components/Hero"
 // In your main entry file (e.g., index.js or App.js)
@@ -27,10 +28,8 @@ function App() {
       <About />
       <Education />
       <Projects />
-
-      <Socials />
-      <Footer />
-      <StarsCanvas />
+      {/* <Socials /> */}
+      <Footer /> <StarsCanvas />
     </div>
   )
 }

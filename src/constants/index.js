@@ -19,6 +19,7 @@ import {
   C,
   java,
   next,
+  firebase,
 } from "../assets"
 
 export const Bachelor1 = [
@@ -128,12 +129,14 @@ const technologies = [
   //   name: "figma",
   //   icon: figma,
   // },
+
   { name: "mySQL", icon: mysql },
   { name: "linux", icon: linux },
   { name: "python", icon: python },
-  { name: "C", icon: C },
+  // { name: "C", icon: C },
   { name: "java", icon: java },
   { name: "next", icon: next },
+  { name: "firebase", icon: firebase },
 ]
 
 export { technologies }

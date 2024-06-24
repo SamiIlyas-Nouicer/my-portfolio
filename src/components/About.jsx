@@ -1,32 +1,16 @@
-import React from "react"
 import Tech from "./Tech" // Assuming this is your Tech component
 import outer from "../assets/outer-space.png"
+
 export default function About() {
-  // Function to add glowing effect to cursor on hover
-  const addGlowingEffect = () => {
-    const cursor = document.getElementById("custom-cursor")
-    if (cursor) {
-      cursor.classList.add("glow")
-    }
-  }
-
-  // Function to remove glowing effect from cursor
-  const removeGlowingEffect = () => {
-    const cursor = document.getElementById("custom-cursor")
-    if (cursor) {
-      cursor.classList.remove("glow")
-    }
-  }
-
   return (
-    <div className="flex flex-col justify-center items-center m-10">
-      <div className="gradient-border-blur p-5 w-7/12 m-20">
-        <div className="inner-container w-full flex ">
-          <div className="w-full flex flex-col justify-center">
-            <h1 className="font-bold text-5xl text-white mb-10 text-center">
+    <div className="flex flex-col justify-center items-center m-4 sm:m-6 md:m-8 lg:m-10">
+      <div className="gradient-border-blur p-4 sm:p-5 md:p-6 lg:p-4 w-full lg:w-8/12 my-10 sm:my-12 md:my-14 lg:my-16">
+        <div className="inner-container w-full flex flex-col lg:flex-row items-center lg:items-start">
+          <div className="w-full lg:w-6/12 flex flex-col justify-center mb-6 lg:mb-0">
+            <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-6 sm:mb-8 md:mb-10 text-center lg:text-left">
               About me
             </h1>
-            <p className="text-white mb-10 font-bold">
+            <p className="text-white mb-6 sm:mb-8 md:mb-10 text-base sm:text-lg md:text-xl lg:text-2xl font-bold">
               My name is Nouicer Sami Ilyas, and I hold a Bachelor's degree in
               Software Engineering from the University of Science and Technology
               Houari Boumediene. I am deeply passionate about Information
@@ -37,12 +21,14 @@ export default function About() {
               machine and deep learning field.
             </p>
           </div>
-          <div className="w-10/12">
-            <img src={outer} alt="outer space" className=" " />
+          <div className="w-full lg:w-6/12 flex justify-center lg:justify-end">
+            <img src={outer} alt="outer space" className="max-w-full h-auto" />
           </div>
         </div>
       </div>
-      <h1 className="font-bold text-5xl text-white mb-10 text-center">Techs</h1>
+      <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-6 sm:mb-8 md:mb-10 text-center">
+        Techs
+      </h1>
       <Tech />
     </div>
   )

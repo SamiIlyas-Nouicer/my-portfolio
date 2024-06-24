@@ -1,6 +1,8 @@
 import * as React from "react"
 import ToggleButton from "@mui/material/ToggleButton"
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup"
+import useMediaQuery from "@mui/material/useMediaQuery"
+import { useTheme } from "@mui/material/styles"
 
 export default function ToggleButtons({ handleYearChange }) {
   const [alignment, setAlignment] = React.useState("Bachelor 1")
@@ -27,6 +29,11 @@ export default function ToggleButtons({ handleYearChange }) {
     }
   }
 
+  const theme = useTheme()
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"))
+  const isMediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"))
+  const isLargeScreen = useMediaQuery(theme.breakpoints.up("md"))
+
   return (
     <ToggleButtonGroup
       data-aos="fade-bottom"
@@ -34,12 +41,14 @@ export default function ToggleButtons({ handleYearChange }) {
       value={alignment}
       exclusive
       onChange={handleChange}
-      aria-label="Platform"
+      aria-label="Year Selection"
       sx={{
         display: "flex",
-        flexDirection: "row",
+        flexDirection: isSmallScreen ? "column" : "row",
         justifyContent: "center",
-        gap: 3,
+        alignItems: isSmallScreen ? "flex-start" : "center",
+        gap: isSmallScreen ? 1 : isMediumScreen ? 2 : 3,
+        padding: isSmallScreen ? "1rem" : "0.5rem",
       }}
     >
       {["Bachelor 1", "Bachelor 2", "Bachelor 3", "Master 1"].map((label) => (
@@ -53,6 +62,8 @@ export default function ToggleButtons({ handleYearChange }) {
               backgroundColor: "#5926b1",
               color: "white",
             },
+            padding: isSmallScreen ? "0.5rem 1rem" : "0.75rem 1.5rem",
+            fontSize: isSmallScreen ? "0.875rem" : "1rem",
           }}
         >
           {label}
