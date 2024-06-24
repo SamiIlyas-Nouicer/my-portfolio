@@ -10,7 +10,7 @@ const Jupiter = () => {
   return (
     <primitive
       object={jupiter.scene}
-      scale={1.5}
+      scale={1.2}
       position-y={0}
       rotation-y={0}
     />
