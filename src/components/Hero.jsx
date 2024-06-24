@@ -8,9 +8,7 @@ export default function Hero() {
       <div className="flex h-full w-full flex-wrap">
         <div className="text-white w-full lg:w-6/12 flex flex-col justify-start items-start p-6 sm:p-8 md:p-10 lg:p-14 xl:p-18 2xl:p-22">
           <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl mb-4 sm:mb-6 md:mb-8 lg:mb-10 xl:mb-12 flex items-center">
-            <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
-              &lt;&gt;
-            </span>
+            <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl"></span>
             Hey, I'm <span className="text-purple-500 ml-1">Sami</span>
           </h1>
           <p className="font-bold text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl 2xl:text-4xl leading-normal">
