@@ -16,7 +16,7 @@ export default function Hero() {
             </span>
             Hey, I'm <span className="text-purple-500 ml-2">Sami</span>
           </h1>
-          <p className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl leading-normal">
+          <p className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-normal">
             I am a software engineer, FullStack developer, and I'm currently
             pursuing my master's in AI!{" "}
             <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl block mt-4">
